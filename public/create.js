@@ -89,14 +89,23 @@ function sign_up(email, password, confirmPassword) {
 
 // Toggle password visibility
 function check() {
-    var passInput = document.getElementById('passkey');
+    var passInput = document.getElementById('password');
+    var reInput = document.getElementById('confirmPassword')
     var toggle = document.querySelector('.toggle');
 
     if (passInput.type === 'password') {
         passInput.type = 'text';
-        toggle.textContent = 'Hide';
+        toggle.textContent = 'Hide Password';
     } else {
         passInput.type = 'password';
+        toggle.textContent = 'Show Password';
+    }
+
+    if (reInput.type === 'password') {
+        reInput.type = 'text';
+        toggle.textContent = 'Hide Password';
+    }else {
+        reInput.type = 'password';
         toggle.textContent = 'Show Password';
     }
 }
