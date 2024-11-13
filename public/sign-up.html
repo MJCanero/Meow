@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="meow.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="container">
+        <h1>Sign-Up</h1>
+        <form action="http://localhost:3000/sign-up" method="post" class="form-container">
+            <p id="error"></p>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+            <input type="text" id="fullName" placeholder="Enter your full name" required>
+            <input type="date" id="birthday" required>
+            <select id="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <select id="role" required>
+                <option value="" disabled selected>Select Account Role</option>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="create.js"></script>
+</body>
+</html>
