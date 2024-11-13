@@ -69,4 +69,18 @@ function newpass() {
     error.style.display = 'none';
     alert('Password is valid.');
     return true;
+} 
+
+function check() {
+    var passInput = document.getElementById('newPassword');
+    var toggle = document.querySelector('.toggle');
+
+    if (passInput.type === 'password') {
+        passInput.type = 'text';
+        toggle.textContent = 'Hide Password';
+    } else {
+        passInput.type = 'password';
+        toggle.textContent = 'Show Password';
+    }
+
 }
